@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "AIModerator",
+  "description": "AI Moderator",
+  "action": { "default_icon": "assets/icon_48.png" },
+  "icons": { "48": "assets/icon_48.png", "128": "assets/icon_128.png" },
+  "version": "1.0",
+  "content_scripts": [
+  
+  {
+    "matches": ["<all_urls>"],
+    "js": ["scripts/popup.js"]
+  }],
+  "permissions": ["alarms", "storage", "activeTab"],
+  "browser_action": {
+    "default_popup": "popup.html"
+  }
+}

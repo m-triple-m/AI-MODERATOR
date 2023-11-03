@@ -136,8 +136,8 @@ const Signup = () => {
                                                     className="btn btn-dark btn-sm btn-block"
                                                     type="submit"
                                                     style={{ fontSize: "15px" }}
-                                                >
-                                                    Signup
+                                                >{ signupForm.isSubmitting ? <span className="spinner-border spinner-border-sm"></span> : '' }
+                                                &nbsp;Signup
                                                 </button>
                                             </div>
 

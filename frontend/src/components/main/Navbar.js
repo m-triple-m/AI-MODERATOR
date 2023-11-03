@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useUserContext } from '../../context/UserProvider';
 import app_config from '../../config';
 
@@ -40,7 +40,17 @@ const Navbar = () => {
             data-mdb-toggle="dropdown"
             aria-expanded="false"
           >
-            <img src={currentUser ? (process.env.REACT_APP_API_URL+'/'+currentUser.avatar) :'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/User-avatar.svg/2048px-User-avatar.svg.png'} className="rounded-circle" height={25} alt="Black and White Portrait of a Man" loading="lazy" />
+            <img
+              src={
+                currentUser
+                  ? process.env.REACT_APP_API_URL + '/' + currentUser.avatar
+                  : 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/User-avatar.svg/2048px-User-avatar.svg.png'
+              }
+              className="rounded-circle"
+              height={25}
+              alt="Black and White Portrait of a Man"
+              loading="lazy"
+            />
           </a>
           <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
             <li>
@@ -48,9 +58,9 @@ const Navbar = () => {
                 My profile
               </NavLink>
             </li>
-            
+
             <li>
-              <a className="dropdown-item" type='button' onClick={logout}>
+              <a className="dropdown-item" type="button" onClick={logout}>
                 Logout
               </a>
             </li>
@@ -76,14 +86,16 @@ const Navbar = () => {
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
-          ><i className="fas fa-bars" />
+          >
+            <i className="fas fa-bars" />
           </button>
           {/* Collapsible wrapper */}
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            {/* Navbar brand */}
-            <a className="navbar-brand mt-2 mt-lg-0" href="#">
+            <Link class="navbar-brand" to="/main/home">
               <img src="/logo2.png" height={50} width={60} alt="AI MODERATOR" loading="lazy" />
-            </a>
+              AI Moderator
+            </Link>
+            {/* Navbar brand */}
             {/* Left links */}
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
@@ -112,7 +124,6 @@ const Navbar = () => {
                   ContactUs
                 </NavLink>
               </li>
-
             </ul>
             {/* Left links */}
           </div>

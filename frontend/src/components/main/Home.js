@@ -109,7 +109,7 @@ const Home = () => {
             <div className="row">
               <Tilt options={defaultOptions} className="col-md-6">
 
-                <div className="card">
+                <div className="card p-4">
                   <img
                     src="https://media.kasperskydaily.com/wp-content/uploads/sites/36/2012/11/05101446/browser-plugin.jpg"
                     className="card-img-top"
@@ -120,8 +120,10 @@ const Home = () => {
                   <div className="card-body">
                     <h5 className="card-title">Extension</h5>
                     <p className="card-text" style={{ textAlign: "justify" }}>
-                      Extensions are small software programs that customize the browsing experience. They enable users to tailor Chrome functionality and behavior to individual needs or preferences. They are built on web technologies such as HTML, JavaScript, and CSS.
+                      Extensions are small software programs that customize the browsing experience. They enable users to tailor Chrome functionality and behavior to individual needs or preferences.
                     </p>
+
+                    <Link className='btn btn-danger mt-3' to="/user/extensiongen">Generate Extension</Link>
 
                   </div>
 
@@ -141,6 +143,7 @@ const Home = () => {
                     <p className="card-text" style={{ textAlign: "justify" }}>
                       Plugins are software that adds capabilities to an existing program without impacting that program's code. These pieces of software effectively "plug in" to existing operational frameworks, allowing users to get the features they want.
                     </p>
+                    <Link className='btn btn-danger mt-3' to="/user/plugingen">Generate Plugin</Link>
 
                   </div>
                 </div>
@@ -331,10 +334,9 @@ const Home = () => {
                           <div className="col-lg-10">
                             <div className="content pb-5">
                               <h1 className="mt-5 mb-5 display-3">
-                                {" "}
-                                <span><h1>To create a browser extension or plugin!</h1></span> {" "}
+                                <span><h1>To create a browser extension or plugin!</h1></span>
 
-                              </h1>{" "}
+                              </h1>
                               <Link
                                 className="btn btn-primary py-3 px-5 mb-5 mb-md-3 me-md-2"
                                 to="/main/signup"
@@ -342,7 +344,7 @@ const Home = () => {
                                 aria-controls="#picker-editor"
                               >
                                 Get Started
-                              </Link>{" "}
+                              </Link>
 
 
                             </div>

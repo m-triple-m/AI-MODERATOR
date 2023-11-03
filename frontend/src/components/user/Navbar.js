@@ -31,7 +31,7 @@ const Navbar = () => {
       {/* Navbar */}
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         {/* Container wrapper */}
-        <div className="container">
+        <div className="container-fluid">
           {/* Toggle button */}
           <button
             className="navbar-toggler"
@@ -47,16 +47,15 @@ const Navbar = () => {
           {/* Collapsible wrapper */}
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             {/* Navbar brand */}
-            <a className="navbar-brand mt-2 mt-lg-0" href="#">
+            <Link className="navbar-brand mt-2 mt-lg-0" to="/main/home">
               <img
                 src="/logo2.png"
-
                 height={50}
                 width={60}
                 alt="AI MODERATOR"
                 loading="lazy"
               />
-            </a>
+            </Link>
             {/* Left links */}
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
@@ -88,7 +87,7 @@ const Navbar = () => {
 
 
             <a
-              className="dropdown-toggle d-flex align-items-center hidden-arrow"
+              className="dropdown-toggle align-items-center hidden-arrow"
               href="#"
               id="navbarDropdownMenuAvatar"
               role="button"

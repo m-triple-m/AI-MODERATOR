@@ -188,8 +188,9 @@ const Login = () => {
                       </div>
 
                       <div className="pt-1 mb-2 pb-1 ">
-                        <button className="btn btn-primary float-end mb-3" type="submit" style={{ borderRadius: '10px' }}>
-                          Login
+                        <button disabled={loginForm.isSubmitting} className="btn btn-primary float-end mb-3" type="submit" style={{ borderRadius: '10px' }}>
+                        { loginForm.isSubmitting ? <span className="spinner-border spinner-border-sm"></span> : '' }
+                          &nbsp;LogIn
                         </button>
                       </div>
                       <div className="text-center mt-5">

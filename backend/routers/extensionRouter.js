@@ -1,4 +1,5 @@
 const express = require("express");
+require("dotenv").config();
 
 const router = express.Router();
 const Model = require("../models/extensionModel");
@@ -9,7 +10,7 @@ router.post("/generate", (req, res) => {
 
   createCode(filename, imagesData, manifestData, scriptData, htmlData, (zipfile) => {
     res.json({
-      downloadLink: `http://localhost:5000/${zipfile}`,
+      downloadLink: `${process.env.API_URL}/${zipfile}`,
       filename: zipfile
     })
   })  
@@ -27,7 +28,7 @@ router.post("/generateandsave", (req, res) => {
 
     createCode(filename, imagesData, manifestData, scriptData, htmlData, (zipfile) => {
       res.json({
-        downloadLink: `http://localhost:5000/${zipfile}`,
+        downloadLink: `${process.env.API_URL}/${zipfile}`,
         filename: zipfile
       })
     })

@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
-const url = `mongodb+srv://mmm:mmm@cluster0.gvyon.mongodb.net/aimoderator?retryWrites=true&w=majority`
+const url = process.env.DB_URL;
 mongoose.connect(url)
 .then((result) => {
     console.log('database connected');

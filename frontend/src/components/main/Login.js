@@ -96,9 +96,9 @@ const Login = () => {
                     <div className="text-center m-4" style={{ color: '#fff' }}>
                       <p className="text-light" style={{ letterSpacing: '0px' }}>
                         Not a member?{' '}
-                        <a href="/main/Signup" style={{ color: '#53e0fc', fontWeight: 'bold' }}>
+                        <Link to="/main/Signup" style={{ color: '#53e0fc', fontWeight: 'bold' }}>
                           Register
-                        </a>
+                        </Link>
                       </p>
                       <p className="text-light" style={{ letterSpacing: '0px' }}>
                         or sign up with:

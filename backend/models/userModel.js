@@ -5,17 +5,11 @@ const myschema = new Schema({
     email : {type: String, required: true},
     password : {type: String, required: true},
     number : {type: Number},
-    avatar: String,
+    avatar: {type : String, default: 'placeholder.png'},
     numExt: {type : Number, default: 0},
     numPlugin: {type : Number, default: 0},
     role : {type: String, default: 'user'},
     createdAt : Date
-
-    // name : {type: String, required: true},
-    // email : {type: String, required: true},
-    // password : {type: String, required: true},
-    // cPassword : String
-
 });
 
 module.exports = model( 'users', myschema );

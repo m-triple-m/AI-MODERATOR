@@ -72,22 +72,22 @@ const Home = () => {
 
       {/* Header */}
       <>
-        <header style={{backgroundColor: '#010003'}}>
+        <header style={{ backgroundColor: '#010003' }}>
           <div className="container py-5">
-          <div className="row">
-            <div className="col-md-6">
-              <img className='w-100' src="https://cdn.dribbble.com/users/214929/screenshots/4967879/ai-loader-opt.gif" alt="" />
+            <div className="row">
+              <div className="col-md-6">
+                <img className='w-100' src="https://cdn.dribbble.com/users/214929/screenshots/4967879/ai-loader-opt.gif" alt="" />
+              </div>
+              <div className="col-md-6 my-auto">
+                <p className="hero-title">
+                  AI
+                </p>
+                <p className='hero-sub-title'>
+                  Moderator
+                </p>
+                <p className='fs-4 text-white'>Moderate your Website Content and in your Browser with no Effort</p>
+              </div>
             </div>
-            <div className="col-md-6 my-auto">
-              <p className="hero-title">
-                AI
-              </p>
-              <p className='hero-sub-title'>
-              Moderator
-              </p>
-              <p className='fs-4 text-white'>Moderate your Website Content and in your Browser with no Effort</p>
-            </div>
-          </div>
           </div>
         </header>
       </>
@@ -517,7 +517,7 @@ const Home = () => {
             <section draggable="false" className="container" data-v-271253ee="">
               <section className="">
                 <div className='heading'>
-                <h1 className='text-center display-3 fw-bold mb-3'>Meet Our Team</h1>
+                  <h1 className='text-center display-3 fw-bold mb-3'>Meet Our Team</h1>
                   {/* <h2 className="mb-3 text-center display-3 bg-info">
                     <span>Meet Our Team</span>
                   </h2> */}
@@ -553,22 +553,22 @@ const Home = () => {
                         {/* icons */}
                         <div>
                           <button type="button" className="btn btn-floating  mx-1">
-                            <a href="" className="me-4 text-reset">
+                            <a href="#" className="me-4 text-reset">
                               <i className="fab fa-facebook-f" />
                             </a>
                           </button>
                           <button type="button" className="btn btn-floating  mx-1">
-                            <a href="" className="me-4 text-reset">
+                            <a href="#" className="me-4 text-reset">
                               <i className="fab fa-instagram" />
                             </a>
                           </button>
                           <button type="button" className="btn btn-floating mx-1">
-                            <a href="" className="me-4 text-reset">
+                            <a href="#" className="me-4 text-reset">
                               <i className="fab fa-linkedin" />
                             </a>
                           </button>
                           <button type="button" className="btn btn-floating mx-1">
-                            <a href="" className="me-4 text-reset">
+                            <a href="#" className="me-4 text-reset">
                               <i className="fab fa-github" />
                             </a>
                           </button>
@@ -601,22 +601,22 @@ const Home = () => {
                         {/* icons */}
                         <div>
                           <button type="button" className="btn btn-floating  mx-1">
-                            <a href="" className="me-4 text-reset">
+                            <a href="#" className="me-4 text-reset">
                               <i className="fab fa-facebook-f" />
                             </a>
                           </button>
                           <button type="button" className="btn btn-floating  mx-1">
-                            <a href="" className="me-4 text-reset">
+                            <a href="#" className="me-4 text-reset">
                               <i className="fab fa-instagram" />
                             </a>
                           </button>
                           <button type="button" className="btn btn-floating  mx-1">
-                            <a href="" className="me-4 text-reset">
+                            <a href="#" className="me-4 text-reset">
                               <i className="fab fa-linkedin" />
                             </a>
                           </button>
                           <button type="button" className="btn btn-floating  mx-1">
-                            <a href="" className="me-4 text-reset">
+                            <a href="#" className="me-4 text-reset">
                               <i className="fab fa-github" />
                             </a>
                           </button>
@@ -662,7 +662,7 @@ const Home = () => {
                     aria-expanded="false"
                     aria-controls="collapseOne"
                   >
-                   What is content moderator ?
+                    What is content moderator ?
                   </button>
                 </h2>
                 <div
@@ -673,7 +673,7 @@ const Home = () => {
                   style={{}}
                 >
                   <div className="accordion-body align-item-justify">
-                  Content moderators play a vital role in ensuring the safety, integrity, and positive user experience on online platforms by upholding community standards and enforcing content guidelines
+                    Content moderators play a vital role in ensuring the safety, integrity, and positive user experience on online platforms by upholding community standards and enforcing content guidelines
                   </div>
                 </div>
               </div>
@@ -698,7 +698,7 @@ const Home = () => {
                   style={{}}
                 >
                   <div className="accordion-bodylign-item-justify">
-                  AI content moderation systems analyze various types of content, including text, images, videos, and audio, to detect patterns and characteristics that may indicate violations of community guidelines or terms of service. These systems can be trained on large datasets of labeled content to learn and recognize different categories of problematic content, such as hate speech, nudity, violence, spam, or other forms of inappropriate or harmful material.
+                    AI content moderation systems analyze various types of content, including text, images, videos, and audio, to detect patterns and characteristics that may indicate violations of community guidelines or terms of service. These systems can be trained on large datasets of labeled content to learn and recognize different categories of problematic content, such as hate speech, nudity, violence, spam, or other forms of inappropriate or harmful material.
                   </div>
                 </div>
               </div>
@@ -723,22 +723,22 @@ const Home = () => {
                   style={{}}
                 >
                   <div className="accordion-body lign-item-justify">
-                  AI content moderation serves several purposes and offers various benefits for platforms and online communities. <br/> <br/>
-                  Here are some key uses of AI content moderation:<br/> <br/>
+                    AI content moderation serves several purposes and offers various benefits for platforms and online communities. <br /> <br />
+                    Here are some key uses of AI content moderation:<br /> <br />
 
-Scalability: AI content moderation enables platforms to handle large volumes of user-generated content efficiently. With the ability to process content at a rapid pace, AI systems can assist in reviewing and filtering massive amounts of data, ensuring a more streamlined moderation process.<br/> <br/>
+                    Scalability: AI content moderation enables platforms to handle large volumes of user-generated content efficiently. With the ability to process content at a rapid pace, AI systems can assist in reviewing and filtering massive amounts of data, ensuring a more streamlined moderation process.<br /> <br />
 
-Efficient Flagging: AI algorithms can quickly flag potentially problematic content for further review by human moderators. By automating the initial screening process, AI content moderation helps prioritize the content that requires human attention, allowing moderators to focus on complex or ambiguous cases.<br/> <br/>
+                    Efficient Flagging: AI algorithms can quickly flag potentially problematic content for further review by human moderators. By automating the initial screening process, AI content moderation helps prioritize the content that requires human attention, allowing moderators to focus on complex or ambiguous cases.<br /> <br />
 
-Faster Response Times: AI content moderation can significantly reduce response times for addressing violations and enforcing community guidelines. By automating the identification of violating content, platforms can take prompt action, such as removing or restricting access to the content, issuing warnings, or applying appropriate penalties.<br/> <br/>
+                    Faster Response Times: AI content moderation can significantly reduce response times for addressing violations and enforcing community guidelines. By automating the identification of violating content, platforms can take prompt action, such as removing or restricting access to the content, issuing warnings, or applying appropriate penalties.<br /> <br />
 
-Consistency: AI content moderation helps achieve more consistent application of community guidelines and terms of service across a platform. Algorithms follow predefined rules and criteria, reducing the potential for human biases or variations in judgment. This helps create a more uniform and predictable moderation experience for users.<br/> <br/>
+                    Consistency: AI content moderation helps achieve more consistent application of community guidelines and terms of service across a platform. Algorithms follow predefined rules and criteria, reducing the potential for human biases or variations in judgment. This helps create a more uniform and predictable moderation experience for users.<br /> <br />
 
-User Protection: AI content moderation plays a crucial role in protecting users from harmful or inappropriate content. By quickly identifying and flagging content that violates community standards, AI systems contribute to maintaining a safer and more positive user experience. This is particularly important for preventing the dissemination of hate speech, harassment, violence, or explicit material.<br/> <br/>
+                    User Protection: AI content moderation plays a crucial role in protecting users from harmful or inappropriate content. By quickly identifying and flagging content that violates community standards, AI systems contribute to maintaining a safer and more positive user experience. This is particularly important for preventing the dissemination of hate speech, harassment, violence, or explicit material.<br /> <br />
 
-Moderation at Scale: With the ever-increasing amount of user-generated content, AI content moderation is essential for platforms to moderate content effectively at scale. It assists in handling the sheer volume of posts, comments, and media files posted by users, ensuring that platforms can maintain a healthy and safe environment for their communities.<br/> <br/>
+                    Moderation at Scale: With the ever-increasing amount of user-generated content, AI content moderation is essential for platforms to moderate content effectively at scale. It assists in handling the sheer volume of posts, comments, and media files posted by users, ensuring that platforms can maintain a healthy and safe environment for their communities.<br /> <br />
 
-Cost-Effectiveness: AI content moderation can be a cost-effective solution compared to relying solely on manual moderation. While human moderators are still necessary for complex cases and final decision-making, AI systems can significantly reduce the workload and allow platforms to allocate their human moderation resources more efficiently.<br/> <br/>
+                    Cost-Effectiveness: AI content moderation can be a cost-effective solution compared to relying solely on manual moderation. While human moderators are still necessary for complex cases and final decision-making, AI systems can significantly reduce the workload and allow platforms to allocate their human moderation resources more efficiently.<br /> <br />
                   </div>
                 </div>
               </div>
@@ -763,28 +763,28 @@ Cost-Effectiveness: AI content moderation can be a cost-effective solution compa
                   style={{}}
                 >
                   <div className="accordion-body">
-                  AI content moderation systems can be trained to recognize and flag different types of violating content through a combination of supervised learning, data labeling, and feature engineering.<br/>
-                   Here's a general process for training AI moderation systems:<br/> <br/>
+                    AI content moderation systems can be trained to recognize and flag different types of violating content through a combination of supervised learning, data labeling, and feature engineering.<br />
+                    Here's a general process for training AI moderation systems:<br /> <br />
 
-Data Collection: Gather a diverse and representative dataset of labeled content that includes examples of different types of violating content you want the AI system to detect. This dataset should cover a range of violations such as hate speech, nudity, violence, spam, etc.<br/> <br/>
+                    Data Collection: Gather a diverse and representative dataset of labeled content that includes examples of different types of violating content you want the AI system to detect. This dataset should cover a range of violations such as hate speech, nudity, violence, spam, etc.<br /> <br />
 
-Data Labeling: Assign labels to each sample in the dataset based on the type of violation it represents. Human moderators or annotators review the content and apply appropriate labels. The labeled data serves as the training set for the AI model.<br/> <br/>
+                    Data Labeling: Assign labels to each sample in the dataset based on the type of violation it represents. Human moderators or annotators review the content and apply appropriate labels. The labeled data serves as the training set for the AI model.<br /> <br />
 
-Feature Extraction: Extract relevant features from the labeled data to represent the content effectively. These features can include textual characteristics, image attributes, audio properties, or other relevant metadata. The choice of features depends on the type of content being moderated.<br/> <br/>
+                    Feature Extraction: Extract relevant features from the labeled data to represent the content effectively. These features can include textual characteristics, image attributes, audio properties, or other relevant metadata. The choice of features depends on the type of content being moderated.<br /> <br />
 
-Model Selection: Choose a machine learning algorithm or model architecture that suits the content moderation task. Common choices include convolutional neural networks (CNNs) for images, recurrent neural networks (RNNs) for text, or a combination of multiple models for multi-modal content.<br/> <br/>
+                    Model Selection: Choose a machine learning algorithm or model architecture that suits the content moderation task. Common choices include convolutional neural networks (CNNs) for images, recurrent neural networks (RNNs) for text, or a combination of multiple models for multi-modal content.<br /> <br />
 
-Training the Model: Feed the labeled data and extracted features into the chosen AI model for training. The model learns to associate the features with the corresponding violation labels during this phase. The training process involves optimizing the model's parameters to minimize the prediction errors.<br/> <br/>
+                    Training the Model: Feed the labeled data and extracted features into the chosen AI model for training. The model learns to associate the features with the corresponding violation labels during this phase. The training process involves optimizing the model's parameters to minimize the prediction errors.<br /> <br />
 
-Validation and Evaluation: Set aside a portion of the labeled dataset as a validation set to monitor the model's performance during training. Regularly evaluate the model's accuracy, precision, recall, and other relevant metrics to assess its effectiveness in recognizing and flagging violating content.<br/> <br/>
+                    Validation and Evaluation: Set aside a portion of the labeled dataset as a validation set to monitor the model's performance during training. Regularly evaluate the model's accuracy, precision, recall, and other relevant metrics to assess its effectiveness in recognizing and flagging violating content.<br /> <br />
 
-Iterative Refinement: Analyze the model's performance and identify areas of improvement. Address any false positives (incorrectly flagging non-violating content) or false negatives (failing to flag violating content) by adjusting the model's parameters, fine-tuning the training process, or updating the dataset with new labeled examples.<br/> <br/>
+                    Iterative Refinement: Analyze the model's performance and identify areas of improvement. Address any false positives (incorrectly flagging non-violating content) or false negatives (failing to flag violating content) by adjusting the model's parameters, fine-tuning the training process, or updating the dataset with new labeled examples.<br /> <br />
 
-Ongoing Updates and Monitoring: Continuously update the AI model with new labeled data and retrain it periodically to adapt to emerging content patterns or evolving violation types. Monitor the model's performance in real-world scenarios and make adjustments as needed.<br/> <br/>
+                    Ongoing Updates and Monitoring: Continuously update the AI model with new labeled data and retrain it periodically to adapt to emerging content patterns or evolving violation types. Monitor the model's performance in real-world scenarios and make adjustments as needed.<br /> <br />
                   </div>
                 </div>
               </div>
-              
+
             </div>
           </section>
         </div>}

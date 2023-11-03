@@ -217,7 +217,7 @@ const CustomizePlugin = () => {
     }
   };
 
-  return <div style={{ backgroundImage: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}>{showPluginOptions()}</div>;
+  return <div className='py-5' style={{ backgroundImage: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}>{showPluginOptions()}</div>;
 };
 
 export default CustomizePlugin;

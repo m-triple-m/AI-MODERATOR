@@ -124,7 +124,7 @@ const ReviewPlugin = ({ userid }) => {
 
   return (
     <>
-      <section className="col-log-6 pt-3" style={{ backgroundImage: 'url("/new4.jpg")', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
+      <section className="pt-3" style={{ backgroundImage: 'url("/new4.jpg")', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
         {/* Bootstrap CSS */}
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
         <style

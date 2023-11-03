@@ -2,7 +2,7 @@ import { useFormik } from 'formik';
 import React from 'react'
 import * as Yup from 'yup';
 import Swal from 'sweetalert2';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 const Signup = () => {
     const navigate = useNavigate();
     const SignupSchema = Yup.object().shape({
@@ -85,8 +85,7 @@ const Signup = () => {
                                             <div className="d-flex align-items-center mb-2 pb-1">
                                                 <img src="/AI.gif" alt="error"
                                                     style={{ height: "100px" 
-                                                    
-                                                    ,marginLeft: "50%"
+                                                    , display: 'block', margin: 'auto'
                                                   }}
                                                     
                                                 />
@@ -95,7 +94,7 @@ const Signup = () => {
                                                 className="mb-3 pb-3"
                                                 style={{ letterSpacing: 1, textAlign: "center", fontSize: "30px" }}
                                             >
-                                                Sign upto your account
+                                                Create new Account
                                             </h5>
                                             <div className=" mb-3">
                                                 <input
@@ -138,11 +137,18 @@ const Signup = () => {
                                                 <button
                                                     className="btn btn-dark btn-sm btn-block"
                                                     type="submit"
-                                                    style={{ fontSize: "20px" }}
+                                                    style={{ fontSize: "15px" }}
                                                 >
                                                     Signup
                                                 </button>
                                             </div>
+
+                                            <p className="mb-1 pb-lg-1 mt-1" style={{ color: "#393f81", fontWeight: '600' }}>
+                                                Already have an account?
+                                                <Link to="/main/login" style={{ color: "#393f81"}} className="studentregister">
+                                                    Login here
+                                                </Link>
+                                            </p>
                                            
                                             
                                             

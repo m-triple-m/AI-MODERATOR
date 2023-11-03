@@ -11,7 +11,7 @@ const CommentPlugin = ({ userid }) => {
   const [currentUser, setCurrentUser] = useState(JSON.parse(sessionStorage.getItem("user")));
 
   const saveAnalysis = async (values) => {
-    const res = await fetch("http://localhost:5000/analysis/add", {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/analysis/add`, {
       method: "POST",
       body: JSON.stringify(values),
       headers: {
@@ -27,7 +27,7 @@ const CommentPlugin = ({ userid }) => {
   };
 
   const fetchComments = async () => {
-    const res = await fetch("http://localhost:5000/comment/getall");
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/comment/getall`);
     const data = await res.json();
     // console.log(data);
     setCommentList(data);
@@ -98,7 +98,7 @@ const CommentPlugin = ({ userid }) => {
           });
           status = "Toxic";
         } else {
-          const res = await fetch("http://localhost:5000/comment/add", {
+          const res = await fetch(`${process.env.REACT_APP_API_URL}/comment/add`, {
             method: "POST",
             body: JSON.stringify(values),
             headers: {
@@ -187,11 +187,6 @@ const CommentPlugin = ({ userid }) => {
               </div>
             </div>
           </div>
-
-
-
-
-
         </div>
         {/* Bootstrap JS */}
       </section>

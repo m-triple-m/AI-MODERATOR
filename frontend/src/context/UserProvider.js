@@ -8,7 +8,7 @@ const UserProvider = ({ children }) => {
 
   const [currentUser, setCurrentUser] = useState(JSON.parse(sessionStorage.getItem('user')));
 
-  const [loggedIn, setLoggedIn] = useState();
+  const [loggedIn, setLoggedIn] = useState(currentUser!==null);
   const navigate = useNavigate();
   const { apiUrl } = app_config;
 
@@ -39,7 +39,7 @@ const UserProvider = ({ children }) => {
     cb(data);
   };
 
-  return <UserContext.Provider value={{ loggedIn, setLoggedIn, logout, updateUser }}>{children}</UserContext.Provider>;
+  return <UserContext.Provider value={{ loggedIn, setLoggedIn, logout, updateUser, setCurrentUser }}>{children}</UserContext.Provider>;
 };
 
 export const useUserContext = () => useContext(UserContext);

@@ -6,7 +6,7 @@ const ManageUser = () => {
 
   const [currentUser, setCurrentUser] = useState(JSON.parse(sessionStorage.getItem('user')));
   const fetchUserData = async () => {
-    const res = await fetch("http://localhost:5000/user/getall");
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/user/getall`);
     const data = await res.json();
     console.log(data);
     setUserList(data);
@@ -18,7 +18,7 @@ const ManageUser = () => {
 
   const deleteUser = async (id) => {
     console.log(id);
-    const res = await fetch('http://localhost:5000/user/delete/' + id, { method: 'DELETE' });
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/user/delete` + id, { method: 'DELETE' });
     if (res.status === 200) {
       fetchUserData();
     }

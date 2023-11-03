@@ -5,7 +5,7 @@ import CommentPlugin from './comment';
 import ReviewPlugin from './review';
 import { toast } from 'react-hot-toast';
 
-const { apiUrl, pluginOptions } = app_config;
+const { pluginOptions } = app_config;
 
 const CustomizePlugin = () => {
   const { pluginName } = useParams();

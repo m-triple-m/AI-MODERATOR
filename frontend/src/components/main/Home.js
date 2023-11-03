@@ -29,7 +29,7 @@ const Home = () => {
     onSubmit: async (values, { setSubmitting }) => {
       console.log(values);
 
-      const res = await fetch('http://localhost:5000/feedback/add', {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/feedback/add`, {
         method: 'POST',
         body: JSON.stringify(values),
         headers: {

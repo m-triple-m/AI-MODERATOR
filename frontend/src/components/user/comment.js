@@ -107,6 +107,7 @@ const CommentPlugin = ({ userid }) => {
           });
 
           // console.log(res.status);
+          setSubmitting(false);
 
           if (res.status === 200) {
             Swal.fire({

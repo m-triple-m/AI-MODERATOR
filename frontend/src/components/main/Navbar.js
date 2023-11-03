@@ -6,7 +6,6 @@ import app_config from '../../config';
 const Navbar = () => {
   const { loggedIn, setLoggedIn, logout } = useUserContext();
   const [currentUser, setCurrentUser] = useState(JSON.parse(sessionStorage.getItem('user')));
-  const { apiUrl } = app_config;
 
   const showLoggedIn = () => {
     if (!loggedIn) {
@@ -41,7 +40,7 @@ const Navbar = () => {
             data-mdb-toggle="dropdown"
             aria-expanded="false"
           >
-            <img src={currentUser ? apiUrl+'/'+currentUser.avatar :'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/User-avatar.svg/2048px-User-avatar.svg.png'} className="rounded-circle" height={25} alt="Black and White Portrait of a Man" loading="lazy" />
+            <img src={currentUser ? process.env.REACT_APP_API_URL+'/'+currentUser.avatar :'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/User-avatar.svg/2048px-User-avatar.svg.png'} className="rounded-circle" height={25} alt="Black and White Portrait of a Man" loading="lazy" />
           </a>
           <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
             <li>
@@ -51,7 +50,7 @@ const Navbar = () => {
             </li>
             
             <li>
-              <a className="dropdown-item" href="" type='button' onClick={logout}>
+              <a className="dropdown-item" type='button' onClick={logout}>
                 Logout
               </a>
             </li>

@@ -4,7 +4,6 @@ const AboutUs = () => {
   return (
     <div>
       <>
-      
         {/*Page Header*/}
         <header className=''>
           {/* Background image */}
@@ -200,22 +199,22 @@ At our core, we strive to uphold the highest standards of content moderation by 
                         {/* icons */}
                         <div>
                           <button type="button" className="btn btn-floating  mx-1">
-                            <a href="" className="me-4 text-reset">
+                            <a href="#" className="me-4 text-reset">
                               <i className="fab fa-facebook-f" />
                             </a>
                           </button>
                           <button type="button" className="btn btn-floating  mx-1">
-                            <a href="" className="me-4 text-reset">
+                            <a href="#" className="me-4 text-reset">
                               <i className="fab fa-instagram" />
                             </a>
                           </button>
                           <button type="button" className="btn btn-floating mx-1">
-                            <a href="" className="me-4 text-reset">
+                            <a href="#" className="me-4 text-reset">
                               <i className="fab fa-linkedin" />
                             </a>
                           </button>
                           <button type="button" className="btn btn-floating mx-1">
-                            <a href="" className="me-4 text-reset">
+                            <a href="#" className="me-4 text-reset">
                               <i className="fab fa-github" />
                             </a>
                           </button>
@@ -248,22 +247,22 @@ At our core, we strive to uphold the highest standards of content moderation by 
                         {/* icons */}
                         <div>
                           <button type="button" className="btn btn-floating  mx-1">
-                            <a href="" className="me-4 text-reset">
+                            <a href="#" className="me-4 text-reset">
                               <i className="fab fa-facebook-f" />
                             </a>
                           </button>
                           <button type="button" className="btn btn-floating  mx-1">
-                            <a href="" className="me-4 text-reset">
+                            <a href="#" className="me-4 text-reset">
                               <i className="fab fa-instagram" />
                             </a>
                           </button>
                           <button type="button" className="btn btn-floating  mx-1">
-                            <a href="" className="me-4 text-reset">
+                            <a href="#" className="me-4 text-reset">
                               <i className="fab fa-linkedin" />
                             </a>
                           </button>
                           <button type="button" className="btn btn-floating  mx-1">
-                            <a href="" className="me-4 text-reset">
+                            <a href="#" className="me-4 text-reset">
                               <i className="fab fa-github" />
                             </a>
                           </button>

@@ -28,7 +28,7 @@ const ReviewPlugin = ({ userid }) => {
   };
 
   const saveAnalysis = async (values) => {
-    const res = await fetch('http://localhost:5000/analysis/add', {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/analysis/add`, {
       method: 'POST',
       body: JSON.stringify(values),
       headers: {

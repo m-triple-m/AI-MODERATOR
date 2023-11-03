@@ -15,22 +15,22 @@ const Footer = () => {
                         {/* Left */}
                         {/* Right */}
                         <div>
-                            <a href="" className="me-4 link-secondary  text-white ">
+                            <a href="#" className="me-4 link-secondary  text-white ">
                                 <i className="fab fa-facebook-f" />
                             </a>
-                            <a href="" className="me-4 link-secondary text-white">
+                            <a href="#" className="me-4 link-secondary text-white">
                                 <i className="fab fa-twitter" />
                             </a>
-                            <a href="" className="me-4 link-secondary text-white">
+                            <a href="#" className="me-4 link-secondary text-white">
                                 <i className="fab fa-google" />
                             </a>
-                            <a href="" className="me-4 link-secondary text-white">
+                            <a href="#" className="me-4 link-secondary text-white">
                                 <i className="fab fa-instagram" />
                             </a>
-                            <a href="" className="me-4 link-secondary text-white">
+                            <a href="#" className="me-4 link-secondary text-white">
                                 <i className="fab fa-linkedin" />
                             </a>
-                            <a href="" className="me-4 link-secondary text-white">
+                            <a href="#" className="me-4 link-secondary text-white">
                                 <i className="fab fa-github" />
                             </a>
                         </div>
@@ -59,22 +59,22 @@ const Footer = () => {
                                     {/* Links */}
                                     <h6 className="text-uppercase fw-bold mb-4  text-white">Technology</h6>
                                     <p className=' text-white'>
-                                        <a href="#!" className="text-reset">
+                                        <a href="#" className="text-reset">
                                             ReactJS
                                         </a>
                                     </p>
                                     <p className=' text-white'>
-                                        <a href="#!" className="text-reset">
+                                        <a href="#" className="text-reset">
                                             Node.js
                                         </a>
                                     </p>
                                     <p className=' text-white'>
-                                        <a href="#!" className="text-reset">
+                                        <a href="#" className="text-reset">
                                             Express.js
                                         </a>
                                     </p>
                                     <p className=' text-white'>
-                                        <a href="#!" className="text-reset">
+                                        <a href="#" className="text-reset">
                                             MongoDB
                                         </a>
                                     </p>

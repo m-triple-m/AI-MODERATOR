@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import app_config from '../../config';
 
 const Dashboard = () => {
-  const { apiUrl } = app_config;
   const [currentUser, setCurrentUser] = useState(JSON.parse(sessionStorage.getItem('user')));
   const [analysisData, setAnalysisData] = useState([]);
 
@@ -10,7 +8,7 @@ const Dashboard = () => {
 
   const getAnalysisData = async () => {
     setLoading(true);
-    const response = await fetch(`${apiUrl}/analysis/getbyuser/${currentUser._id}`);
+    const response = await fetch(`${process.env.REACT_APP_API_URL}/analysis/getbyuser/${currentUser._id}`);
     setLoading(false);
     const data = await response.json();
     console.log(data);

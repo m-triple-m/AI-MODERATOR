@@ -13,7 +13,7 @@ const ContactUs = () => {
     onSubmit: async (values, { setSubmitting }) => {
         console.log(values);
 
-        const res = await fetch('http://localhost:5000/contactUs/add', {
+        const res = await fetch(`${process.env.REACT_APP_API_URL}/contactUs/add`, {
             method: 'POST',
             body: JSON.stringify(values),
             headers: {
@@ -22,6 +22,7 @@ const ContactUs = () => {
         });
 
         console.log(res.status);
+        setSubmitting(false);
 
         if (res.status === 200) {
             Swal.fire({
@@ -42,9 +43,6 @@ const ContactUs = () => {
     },
 
 });
-
-
-
 
     return (
         <>
@@ -134,32 +132,32 @@ const ContactUs = () => {
                                                 <hr className="hr mb-4"></hr>
                                                 <div className='text-center'>
                                                     <button type="button" className="btn btn-floating text-white mx-1">
-                                                        <a href="" className="me-4 text-reset">
+                                                        <a href="#" className="me-4 text-reset">
                                                             <i className="fab fa-facebook-f" />
                                                         </a>
                                                     </button>
                                                     <button type="button" className="btn btn-floating text-white mx-1">
-                                                        <a href="" className="me-4 text-reset">
+                                                        <a href="#" className="me-4 text-reset">
                                                             <i className="fab fa-twitter" />
                                                         </a>
                                                     </button>
                                                     <button type="button" className="btn btn-floating text-white mx-1">
-                                                        <a href="" className="me-4 text-reset">
+                                                        <a href="#" className="me-4 text-reset">
                                                             <i className="fab fa-google" />
                                                         </a>
                                                     </button>
                                                     <button type="button" className="btn btn-floating text-white mx-1">
-                                                        <a href="" className="me-4 text-reset">
+                                                        <a href="#" className="me-4 text-reset">
                                                             <i className="fab fa-instagram" />
                                                         </a>
                                                     </button>
                                                     <button type="button" className="btn btn-floating text-white mx-1">
-                                                        <a href="" className="me-4 text-reset">
+                                                        <a href="#" className="me-4 text-reset">
                                                             <i className="fab fa-linkedin" />
                                                         </a>
                                                     </button>
                                                     <button type="button" className="btn btn-floating text-white mx-1">
-                                                        <a href="" className="me-4 text-reset">
+                                                        <a href="#" className="me-4 text-reset">
                                                             <i className="fab fa-github" />
                                                         </a>
                                                     </button>

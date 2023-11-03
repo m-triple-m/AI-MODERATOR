@@ -13,7 +13,7 @@ const ExtensionManager = () => {
 
   const [currentUser, setCurrentUser] = useState(JSON.parse(sessionStorage.getItem('user')));
   const fetchExtensionData = async () => {
-    const res = await fetch('http://localhost:5000/extension/getbyuser/' + currentUser._id);
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/extension/getbyuser` + currentUser._id);
     const { result } = await res.json();
     console.log(result);
     setExtensionList(result);
@@ -25,7 +25,7 @@ const ExtensionManager = () => {
 
   const deleteExtension = async (id) => {
     console.log(id);
-    const res = await fetch('http://localhost:5000/extension/delete/' + id, { method: 'DELETE' });
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/extension/delete` + id, { method: 'DELETE' });
     if (res.status === 200) {
       toast.success('Extension deleted');
       fetchExtensionData();
@@ -33,7 +33,7 @@ const ExtensionManager = () => {
   };
 
   const generateExtension = async (configOptions) => {
-    const res = await fetch('http://localhost:5000/extension/generate', {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/extension/generate`, {
       method: 'POST',
       body: JSON.stringify({
         configOptions,

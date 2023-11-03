@@ -9,12 +9,12 @@ const Login = () => {
   const { loggedIn, setLoggedIn, setCurrentUser } = useUserContext();
   const navigate = useNavigate();
 
-  const login = Yup.object().shape({
+  const loginSchema = Yup.object().shape({
     email: Yup.string().email('Invalid email').required('Email is Required'),
     password: Yup.string().required('Required')
   });
 
-  const Login = useFormik({
+  const loginForm = useFormik({
     initialValues: {
       email: '',
       password: ''
@@ -22,7 +22,7 @@ const Login = () => {
     onSubmit: async (values, { setSubmitting }) => {
       console.log(values);
 
-      const res = await fetch('http://localhost:5000/user/authenticate', {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/user/authenticate`, {
         method: 'POST',
         body: JSON.stringify(values), // this is used to convert js data in json formate
         headers: {
@@ -31,6 +31,7 @@ const Login = () => {
       });
 
       console.log(res.status);
+      setSubmitting(false);
       if (res.status === 200) {
         Swal.fire({
           icon: 'success',
@@ -55,8 +56,8 @@ const Login = () => {
           text: 'Something went wrong!'
         });
       }
-    }
-    // validationSchema: login,
+    },
+    validationSchema: loginSchema,
   });
 
   return (
@@ -152,7 +153,7 @@ const Login = () => {
                         }}
                       />
                     </div>
-                    <form className="mx-1 mx-md-4 text-black mt-5" onSubmit={Login.handleSubmit}>
+                    <form className="mx-1 mx-md-4 text-black mt-5" onSubmit={loginForm.handleSubmit}>
                       <div className="d-flex flex-row align-items-center mb-4">
                         <i className="fas fa-user fa-lg me-3 fa-fw" />
                         <div className="flex-fill mb-0">
@@ -163,10 +164,10 @@ const Login = () => {
                             autoComplete="off"
                             className="form-control form-control-lg"
                             placeholder="User Id"
-                            value={Login.values.email}
-                            onChange={Login.handleChange}
+                            value={loginForm.values.email}
+                            onChange={loginForm.handleChange}
                           />
-                          <span className="text-danger">{Login.errors.email}</span>
+                          <span className="text-danger">{loginForm.errors.email}</span>
                         </div>
                       </div>
                       <div className="d-flex flex-row align-items-center mb-4">
@@ -179,10 +180,10 @@ const Login = () => {
                             autoComplete="off"
                             className="form-control form-control-lg"
                             placeholder="Password"
-                            value={Login.values.password}
-                            onChange={Login.handleChange}
+                            value={loginForm.values.password}
+                            onChange={loginForm.handleChange}
                           />
-                          <span className="text-danger">{Login.errors.password}</span>
+                          <span className="text-danger">{loginForm.errors.password}</span>
                         </div>
                       </div>
 
@@ -192,9 +193,9 @@ const Login = () => {
                         </button>
                       </div>
                       <div className="text-center mt-5">
-                        <NavLink className="text-primary mb-3" to="/main/signup">
+                        <Link className="text-primary mb-3" to="/main/signup">
                           Forgot password?
-                        </NavLink>
+                        </Link>
                         <p className="mb-1 pb-lg-1 mt-1" style={{ color: '#393f81', fontWeight: '600' }}>
                           Don't have an account?{' '}
                           <Link to="/main/signup" style={{ color: '#393f81' }} className="studentregister">

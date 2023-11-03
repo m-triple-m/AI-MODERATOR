@@ -16,7 +16,7 @@ const UserProfile = () => {
         },
         onSubmit: async (values) => {
             console.log(values)
-            const res = await fetch('http://localhost:5000/user/update/' + currentUser._id, {
+            const res = await fetch(`${process.env.REACT_APP_API_URL}/user/update` + currentUser._id, {
                 method: 'PUT',
                 body: JSON.stringify(values),
                 headers: {
@@ -46,7 +46,7 @@ const UserProfile = () => {
     })
 
     const fetchProfileData = async () =>  {
-        const res = await fetch('http://localhost:5000/user/getbyid/' + currentUser._id);
+        const res = await fetch(`${process.env.REACT_APP_API_URL}/user/getbyid` + currentUser._id);
         console.log(res.status);
         if (res.status === 200) {
             const data = await res.json();

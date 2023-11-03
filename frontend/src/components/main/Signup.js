@@ -3,6 +3,7 @@ import React from 'react'
 import * as Yup from 'yup';
 import Swal from 'sweetalert2';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
+
 const Signup = () => {
     const navigate = useNavigate();
     const SignupSchema = Yup.object().shape({
@@ -12,10 +13,6 @@ const Signup = () => {
             .required('Required'),
         email: Yup.string().email('Invalid email').required('Required'),
         password: Yup.string().required('Please Enter your password')
-        .matches(
-          /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
-          "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and One Special Case Character"
-        ),
 
     });
 
@@ -29,7 +26,7 @@ const Signup = () => {
         onSubmit: async (values, { setSubmitting }) => {
             console.log(values);
 
-            const res = await fetch('http://localhost:5000/user/add', {
+            const res = await fetch(`${process.env.REACT_APP_API_URL}/user/add`, {
                 method: 'POST',
                 body: JSON.stringify(values),
                 headers: {
@@ -38,6 +35,7 @@ const Signup = () => {
             });
 
             console.log(res.status);
+            setSubmitting(false);
 
             if (res.status === 200) {
                 Swal.fire({
@@ -56,7 +54,7 @@ const Signup = () => {
                 })
             }
         },
-        // validationSchema: SignupSchema,
+        validationSchema: SignupSchema,
 
     });
 
